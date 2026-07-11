@@ -1,1 +1,1 @@
-A place for documents related to Armaria labs projects, 
+A place for documents related to Armaria labs projects. 
