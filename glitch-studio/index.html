@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Glitch Studio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<canvas id="view"></canvas>
+<div id="panel">
+  <header><b>GLITCH STUDIO</b> <span id="fps"></span>
+    <small>H hide · F fullscreen · Space morph · R randomize · dbl-click slider resets</small></header>
+  <section>
+    <select id="presets"></select>
+    <button id="savePreset">Save</button><button id="random">Random</button><button id="reset">Reset</button>
+  </section>
+  <section>
+    <label class="btn">+ Images<input id="imgfiles" type="file" accept="image/*" multiple hidden></label>
+    <button id="next">Morph ▶</button><button id="shot">PNG</button><button id="rec">● Rec</button><button id="fs">Full</button>
+    <div id="thumbs"></div>
+  </section>
+  <section>
+    <b>Audio in</b> (mixer / interface / loopback)
+    <button id="audioEnable">Find inputs</button>
+    <select id="audioDev"><option value="">Click “Find inputs” first</option></select>
+    <label class="btn">File<input id="audioFile" type="file" accept="audio/*" hidden></label>
+    <button id="demoAudio">Demo beat</button><button id="tap">Tap tempo</button>
+    <div id="audioInfo" class="info">No audio input</div>
+    <canvas id="meters" width="200" height="40"></canvas>
+    <small>bass · mid · treble · level · beat · note</small>
+  </section>
+  <section>
+    <b>MIDI in</b> (DAW via virtual port)
+    <button id="midiEnable">Find MIDI</button>
+    <select id="midiDev"><option value="">Click “Find MIDI” first</option></select>
+    <button id="clearCC">Clear CC maps</button>
+    <div id="midiInfo" class="info">Beat source “MIDI clock” / “MIDI note” in Audio group. Click MIDI next to any slider to learn a CC.</div>
+  </section>
+  <div id="params"></div>
+</div>
+<script src="params.js"></script><script src="shaders.js"></script><script src="audio.js"></script><script src="main.js"></script>
+</body></html>
